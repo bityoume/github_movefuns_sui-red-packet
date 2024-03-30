@@ -537,7 +537,7 @@ function App() {
               arguments: [
                 txb.pure(Number(redPacketAmount)),
                 send_amount,
-                txb.pure([]),
+                // txb.pure([]),
               ],
               typeArguments: [SUI_TYPE_ARG],
             });
