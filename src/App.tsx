@@ -76,7 +76,8 @@ const WEATHER_ORACLE =
   "0x1aedcca0b67b891c64ca113fce87f89835236b4c77294ba7e2db534ad49a58dc";
 
 const PACKAGE_ID =
-  "0x87e464f59853db928695824995728316c0358bcdee7044a6534de5cb6cbe5552";
+  "0xe5417558cf7edc87840fef347f294dc0fa7bdcd82c043e630c504d233c6b4784";
+
 const MODULE_NAME = "red_packet";
 const SEND_FUNCTION_NAME = "send_new_red_packet";
 const CLAIM_FUNCTION_NAME = "claim_red_packet";
@@ -643,9 +644,9 @@ function App() {
                     sx={{
                       visibility:
                         Number(searcherRedPacket.left_amount) === 0 ||
-                        searcherRedPacket.claimer_addresses.includes(
-                          currentAccount?.address || ""
-                        )
+                          searcherRedPacket.claimer_addresses.includes(
+                            currentAccount?.address || ""
+                          )
                           ? "hidden"
                           : "visible",
                     }}
@@ -970,45 +971,45 @@ function App() {
                   {redPacket.claimer_addresses.includes(
                     currentAccount?.address || ""
                   ) && (
-                    <Box
-                      sx={{
-                        // background: "rgba(183,137,136,0.4)",
-                        position: "absolute",
-                        width: "100%",
-                        height: "100%",
-                        top: 0,
-                        left: 0,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "flex-start",
-                      }}
-                    >
-                      <Typography
+                      <Box
                         sx={{
-                          opacity: 1,
+                          // background: "rgba(183,137,136,0.4)",
                           position: "absolute",
-                          top: "-2px",
-                          left: "4px",
-                          color: "#d5ff00",
+                          width: "100%",
+                          height: "100%",
+                          top: 0,
+                          left: 0,
                           display: "flex",
-                          // fontSize: isClaimed ? "2rem" : "1.5rem",
-                          fontSize: "0.75rem",
                           alignItems: "center",
                           justifyContent: "flex-start",
-                          textAlign: "left",
-                          width: "30%",
                         }}
                       >
-                        <span
-                          style={{
+                        <Typography
+                          sx={{
                             opacity: 1,
+                            position: "absolute",
+                            top: "-2px",
+                            left: "4px",
+                            color: "#d5ff00",
+                            display: "flex",
+                            // fontSize: isClaimed ? "2rem" : "1.5rem",
+                            fontSize: "0.75rem",
+                            alignItems: "center",
+                            justifyContent: "flex-start",
+                            textAlign: "left",
+                            width: "30%",
                           }}
                         >
-                          CLAIMED
-                        </span>
-                      </Typography>
-                    </Box>
-                  )}
+                          <span
+                            style={{
+                              opacity: 1,
+                            }}
+                          >
+                            CLAIMED
+                          </span>
+                        </Typography>
+                      </Box>
+                    )}
                   {isClaiming?.[redPacket.id.id] && (
                     <Box
                       sx={{
